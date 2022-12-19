@@ -82,7 +82,7 @@ M.hlgroups = {
   DiffAdd =     {bg = c.green},
   DiffChange =  {bg = c.yellow},
   DiffDelete =  {bg = c.red},
-  SignColumn =  {bg = c.fg0},
+  SignColumn =  {bg = c.bg0},
 
   GitSignsAdd =      {link = "diffAdded"},
   GitSignsChange =   {link = "diffChanged"},
