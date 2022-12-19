@@ -1,9 +1,34 @@
+local hl = require("coal.hlgroups")
+local c = require("coal.colors")
+
 local M = {}
 
-function M.set_highlights(hlgroups)
+local function set_highlights(hlgroups)
   for group, colors in pairs(hlgroups) do
     vim.api.nvim_set_hl(0, group, colors)
   end
+end
+
+local function set_config(config)
+  if config.number_column_lighter_bg then
+    hl.groups.LineNr.bg = c.bg_nvtree
+  end
+  hl.groups.Comment.italic = config.italicize_comments
+  local diagnostics = {
+    'DiagnosticError',
+    'DiagnosticWarn',
+    'DiagnosticInfo',
+    'DiagnosticHint',
+  }
+  for _, i in ipairs(diagnostics) do
+    hl.groups[i].italic = config.italicize_diagnostics
+  end
+end
+
+function M.setup(overrides)
+  local defaults = require("coal.config")
+  local config = vim.tbl_extend("force", defaults, overrides or {})
+  set_config(config)
 end
 
 function M.load()
@@ -15,10 +40,9 @@ function M.load()
   vim.o.termguicolors = true
   vim.o.background = "dark"
 
-  local hl = require("coal.hlgroups")
   hl.set_term_colors()
 
-  M.set_highlights(hl.hlgroups)
+  set_highlights(hl.groups)
 end
 
 return M

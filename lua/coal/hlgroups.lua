@@ -1,7 +1,7 @@
 local c = require("coal.colors")
 
 local M = {}
-M.hlgroups = {
+M.groups = {
   Normal =      {fg = c.fg0, bg = c.bg0},
   NormalNC =    {link = "Normal"},
   NonText =     {fg = c.fg_nt},
@@ -82,7 +82,7 @@ M.hlgroups = {
   DiffAdd =     {bg = c.green},
   DiffChange =  {bg = c.yellow},
   DiffDelete =  {bg = c.red},
-  SignColumn =  {bg = c.bg0},
+  SignColumn =  {link = "LineNr"},
 
   GitSignsAdd =      {link = "diffAdded"},
   GitSignsChange =   {link = "diffChanged"},
