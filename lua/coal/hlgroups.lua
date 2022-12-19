@@ -6,6 +6,7 @@ M.hlgroups = {
   NormalNC =    {link = "Normal"},
   NonText =     {fg = c.fg_nt},
   EndofBuffer = {fg = c.bg0, bg = c.back},
+  Conceal = {link = "Normal"},
 
   Comment =     {fg = c.fg_cm, italic = true},
   Keyword =     {fg = c.red},
@@ -39,10 +40,10 @@ M.hlgroups = {
   Float =     {link = "Number"},
   Boolean =   {link = "Constant"},
 
-  DiagnosticError = {fg = c.red},
-  DiagnosticWarn =  {fg = c.orange},
-  DiagnosticInfo =  {fg = c.bright_blue},
-  DiagnosticHint =  {fg = c.fg1},
+  DiagnosticError = {fg = c.red, italic = true},
+  DiagnosticWarn =  {fg = c.orange, italic = true},
+  DiagnosticInfo =  {fg = c.bright_blue, italic = true},
+  DiagnosticHint =  {fg = c.fg1, italic = true},
   DiagnosticUnderlineError = {sp = c.red, undercurl = true},
   DiagnosticUnderlineWarn =  {sp = c.orange, undercurl = true},
   DiagnosticUnderlineInfo =  {sp = c.bright_blue, undercurl = true},
@@ -103,7 +104,7 @@ M.hlgroups = {
   NvimTreeSymlink =     {fg = c.pink},
 
   TelescopeNormal = {fg = c.fg0, bg = c.bg_nvtree},
-  TelescopeBorder = {fg = c.red, bg = c.bg_nvtree},
+  TelescopeBorder = {fg = c.fg1, bg = c.bg_nvtree},
 }
 function M.set_term_colors()
   vim.g.terminal_color_0 = c.bg0
