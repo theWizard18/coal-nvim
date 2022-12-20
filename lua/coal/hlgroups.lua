@@ -73,6 +73,7 @@ M.groups = {
   TabLineFill = {link = "TabLine"},
   TabLineSel =  {bg = c.bg0},
 
+  SignColumn =  {link = "LineNr"},
   diffAdded =   {fg = c.green},
   diffRemoved = {fg = c.red},
   diffDeleted = {fg = c.red},
@@ -82,7 +83,6 @@ M.groups = {
   DiffAdd =     {bg = c.green},
   DiffChange =  {bg = c.yellow},
   DiffDelete =  {bg = c.red},
-  SignColumn =  {link = "LineNr"},
 
   GitSignsAdd =      {link = "diffAdded"},
   GitSignsChange =   {link = "diffChanged"},
