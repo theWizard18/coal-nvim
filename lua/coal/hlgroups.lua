@@ -50,6 +50,11 @@ M.groups = {
   DiagnosticUnderlineInfo =  {sp = c.bright_blue, undercurl = true},
   DiagnosticUnderlineHint =  {sp = c.fg1, undercurl = true},
 
+  MatchParen = {fg = c.red, bg = c.white, bold = true},
+
+  Folded = {fg = c.fg1, bg = c.bg_nvtree},
+  FoldColumn = {link = "Folded"},
+
   CursorLine =   {bg = c.bg_cl},
   CursorColumn = {link = "CursorLine"},
   ColorColumn =  {bg = c.black},
