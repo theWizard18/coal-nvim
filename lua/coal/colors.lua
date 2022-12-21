@@ -16,12 +16,13 @@ local M = {
   red =    '#ff575a',
   orange = '#ff9d3b',
   yellow = '#eccc5e',
+  lime =   '#c6df30',
   green =  '#75da6a',
-  teal =   '#2fe2a1',
+  teal =   '#2fe2a1', --
   cyan =   '#6ecffc',
   blue =   '#5795ff',
   violet = '#9c75e8',
-  pink =   '#ff9cb8',
+  pink =   '#ff6e9e',
 
   bright_red =    '#ff9e9f',
   bright_orange = '#ffc29c', --
@@ -40,8 +41,6 @@ local M = {
   dark_blue =   '#0062c1', --
   dark_violet = '#6f33c4', --
   dark_pink =   '#ff1483', --
-
-  pure_red = 'ff0000',
 }
 
 return M
