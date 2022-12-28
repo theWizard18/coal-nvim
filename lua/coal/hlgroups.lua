@@ -6,18 +6,18 @@ M.groups = {
   NormalNC =    {link = "Normal"},
   NonText =     {fg = c.fg_nt},
   EndofBuffer = {fg = c.bg0, bg = c.back},
-  Conceal = {link = "Normal"},
+  Conceal =     {link = "Normal"},
 
   Comment =     {fg = c.fg_cm, italic = true},
   Keyword =     {fg = c.red},
   Label =       {link = "Keyword"},
   Operator =    {link = "Keyword"},
   Statement =   {link = "Keyword"},
-  Exception =   {link = "Keyword"},
-  Conditional = {link = "Keyword"},
-  Repeat =      {link = "Keyword"},
+  Exception =   {link = "Statement"},
+  Conditional = {link = "Statement"},
+  Repeat =      {link = "Statement"},
 
-  PreProc = {fg = c.violet},
+  PreProc =   {fg = c.violet},
   Include =   {link = "PreProc"},
   Macro =     {link = "PreProc"},
   Define =    {link = "PreProc"},
@@ -30,16 +30,16 @@ M.groups = {
   SpecialComment = {fg = c.cyan},
   Debug =          {},
 
-  Type =       {fg = c.pink},
+  Type =       {fg = c.blue, bold = true},
   Identifier = {fg = c.fg0},
-  Function =   {fg = c.blue},
+  Function =   {fg = c.fg0},
 
-  Constant =  {fg = c.lime, bold = true},
+  Constant =  {fg = c.cyan, bold = true},
   String =    {fg = c.yellow},
   Character = {link = "String"},
   Number =    {fg = c.orange},
   Float =     {link = "Number"},
-  Boolean =   {link = "Number"},
+  Boolean =   {link = "Constant"},
 
   DiagnosticError = {fg = c.red, italic = true},
   DiagnosticWarn =  {fg = c.orange, italic = true},
@@ -50,7 +50,7 @@ M.groups = {
   DiagnosticUnderlineInfo =  {sp = c.bright_blue, undercurl = true},
   DiagnosticUnderlineHint =  {sp = c.fg1, undercurl = true},
 
-  MatchParen = {fg = c.red, bg = c.white, bold = true},
+  MatchParen = {fg = c.fg0, bg = c.visual, bold = true},
 
   Folded = {fg = c.fg1, bg = c.bg_nvtree},
   FoldColumn = {link = "Folded"},
@@ -108,7 +108,7 @@ M.groups = {
   NvimTreeFolderName =  {link = "Directory"},
   NvimTreeOpenedFile =  {fg = c.cyan, bold = true},
   NvimTreeExecFile =    {fg = c.green, bold = true},
-  NvimTreeSymlink =     {fg = c.pink},
+  NvimTreeSymlink =     {fg = c.violet},
 
   TelescopeNormal = {fg = c.fg0, bg = c.bg_nvtree},
   TelescopeBorder = {fg = c.fg1, bg = c.bg_nvtree},
