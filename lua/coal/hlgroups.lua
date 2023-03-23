@@ -9,50 +9,50 @@ M.groups = {
   Conceal =     {link = "Normal"},
 
   Comment =     {fg = c.fg_cm, italic = true},
-  Keyword =     {fg = c.red},
+  Keyword =     {fg = c.violet},
   Label =       {link = "Keyword"},
-  Operator =    {link = "Keyword"},
   Statement =   {link = "Keyword"},
-  Exception =   {link = "Statement"},
-  Conditional = {link = "Statement"},
-  Repeat =      {link = "Statement"},
+  Operator =    {fg = c.violet},
+  Conditional = {fg = c.violet},
+  Exception =   {link = "Conditional"},
+  Repeat =      {link = "Conditional"},
 
-  PreProc =   {fg = c.violet},
+  PreProc =   {fg = c.cyan},
   Include =   {link = "PreProc"},
   Macro =     {link = "PreProc"},
   Define =    {link = "PreProc"},
   PreCondit = {link = "PreProc"},
 
-  Special =        {fg = c.fg0, bold = false},
-  SpecialChar =    {},
+  Special =        {fg = c.green, bold = false},
+  SpecialChar =    {link = "Special"},
   Tag =            {fg = c.fg0},
   Delimiter =      {link = "Tag"},
-  SpecialComment = {fg = c.cyan},
+  SpecialComment = {fg = c.green},
   Debug =          {},
 
-  Type =       {fg = c.blue, bold = true},
+  Type =       {fg = c.red},
   Identifier = {fg = c.fg0},
-  Function =   {fg = c.fg0},
+  Function =   {fg = c.blue},
 
-  Constant =  {fg = c.cyan, bold = true},
-  String =    {fg = c.yellow},
+  Constant =  {fg = c.yellow},
+  String =    {link = "Constant"},
   Character = {link = "String"},
-  Number =    {fg = c.orange},
+  Number =    {link = "Constant"},
   Float =     {link = "Number"},
   Boolean =   {link = "Constant"},
 
   DiagnosticError = {fg = c.red, italic = true},
   DiagnosticWarn =  {fg = c.orange, italic = true},
-  DiagnosticInfo =  {fg = c.bright_blue, italic = true},
+  DiagnosticInfo =  {fg = c.bght_blue, italic = true},
   DiagnosticHint =  {fg = c.fg1, italic = true},
   DiagnosticUnderlineError = {sp = c.red, undercurl = true},
   DiagnosticUnderlineWarn =  {sp = c.orange, undercurl = true},
-  DiagnosticUnderlineInfo =  {sp = c.bright_blue, undercurl = true},
+  DiagnosticUnderlineInfo =  {sp = c.bght_blue, undercurl = true},
   DiagnosticUnderlineHint =  {sp = c.fg1, undercurl = true},
 
-  MatchParen = {fg = c.fg0, bg = c.visual, bold = true},
+  MatchParen = {bold = true, underline = true},
 
-  Folded = {fg = c.fg1, bg = c.bg_nvtree},
+  Folded = {fg = c.fg1, bg = c.bg},
   FoldColumn = {link = "Folded"},
 
   CursorLine =   {bg = c.bg_cl},
@@ -66,7 +66,7 @@ M.groups = {
 
   StatusLine =   {fg = c.fg1, bg = c.bg1},
   StatusLineNC = {fg = c.bg1, bg = c.bg1},
-  VertSplit =    {link = "StatusLineNC"},
+  VertSplit =    {fg = c.bg0, bg = c.bg1},
 
   Pmenu =      {fg = c.fg1, bg = c.bg2},
   PmenuSel =   {fg = c.fg1, bg = c.bg_cl},
@@ -101,35 +101,35 @@ M.groups = {
   IndentBlanklineContextChar =        {fg = c.fg1},
   IndentBlanklineContextStart =       {sp = c.fg1, underline = true},
 
-  Directory = {fg = c.blue, bold = true},
+  Directory = {fg = c.blue},
 
-  NvimTreeNormal =      {fg = c.fg0, bg = c.bg_nvtree},
-  NvimTreeEndOfBuffer = {fg = c.bg_nvtree, bg = c.bg_nvtree},
+  NvimTreeNormal =      {link = "Normal"},
+  NvimTreeEndofBuffer = {link = "EndofBuffer"},
   NvimTreeFolderName =  {link = "Directory"},
-  NvimTreeOpenedFile =  {fg = c.cyan, bold = true},
+  NvimTreeOpenedFile =  {fg = c.fg0, bold = true},
   NvimTreeExecFile =    {fg = c.green, bold = true},
   NvimTreeSymlink =     {fg = c.violet},
 
-  TelescopeNormal = {fg = c.fg0, bg = c.bg_nvtree},
-  TelescopeBorder = {fg = c.fg1, bg = c.bg_nvtree},
+  TelescopeNormal = {fg = c.fg0, bg = c.bg},
+  TelescopeBorder = {fg = c.fg1, bg = c.bg},
 }
 function M.set_term_colors()
-  vim.g.terminal_color_0 = c.bg0
-  vim.g.terminal_color_1 = c.red
-  vim.g.terminal_color_2 = c.green
-  vim.g.terminal_color_3 = c.yellow
-  vim.g.terminal_color_4 = c.blue
-  vim.g.terminal_color_5 = c.violet
-  vim.g.terminal_color_6 = c.cyan
-  vim.g.terminal_color_7 = c.fg1
-  vim.g.terminal_color_8 = c.bg1
-  vim.g.terminal_color_9 = c.bright_red
-  vim.g.terminal_color_10 = c.bright_green
-  vim.g.terminal_color_11 = c.bright_yellow
-  vim.g.terminal_color_12 = c.bright_blue
-  vim.g.terminal_color_13 = c.bright_violet
-  vim.g.terminal_color_14 = c.bright_cyan
-  vim.g.terminal_color_15 = c.fg0
+  vim.g.terminal_color_0 =  c.bg1
+  vim.g.terminal_color_1 =  c.red
+  vim.g.terminal_color_2 =  c.green
+  vim.g.terminal_color_3 =  c.yellow
+  vim.g.terminal_color_4 =  c.blue
+  vim.g.terminal_color_5 =  c.violet
+  vim.g.terminal_color_6 =  c.cyan
+  vim.g.terminal_color_7 =  c.fg_cm
+  vim.g.terminal_color_8 =  c.bg2
+  vim.g.terminal_color_9 =  c.bght_red
+  vim.g.terminal_color_10 = c.bght_green
+  vim.g.terminal_color_11 = c.bght_yellow
+  vim.g.terminal_color_12 = c.bght_blue
+  vim.g.terminal_color_13 = c.bght_violet
+  vim.g.terminal_color_14 = c.bght_cyan
+  vim.g.terminal_color_15 = c.fg1
 end
 
 return M
