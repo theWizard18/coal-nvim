@@ -11,7 +11,7 @@ end
 
 local function set_config(config)
   if config.number_column_lighter_bg then
-    hl.groups.LineNr.bg = c.bg_nvtree
+    hl.groups.LineNr.bg = c.bg_nr
     local diffs = {
       'diffAdded',
       'diffRemoved',
@@ -21,7 +21,7 @@ local function set_config(config)
       'diffNewFile',
     }
     for _,i in pairs(diffs) do
-      hl.groups[i].bg = c.bg_nvtree
+      hl.groups[i].bg = c.bg_nr
     end
   end
   hl.groups.Comment.italic = config.italicize_comments
